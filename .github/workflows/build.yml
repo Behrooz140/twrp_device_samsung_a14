@@ -1,4 +1,4 @@
-name: OrangeFox A20 - Builder
+name: OrangeFox A14 - Builder
 
 on:
   workflow_dispatch:
