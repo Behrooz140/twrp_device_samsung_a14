@@ -1,0 +1,36 @@
+name: OrangeFox A20 - Builder
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    name: 🦊 Build OrangeFox 12.1
+    runs-on: ubuntu-latest
+
+    env:
+      GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout device tree
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Build OrangeFox
+        uses: UWU-TEAM/UWU-OrangeFox-Builder@v1.0.0
+        with:
+          USER_NAME: 'Behrooz140'
+          USER_EMAIL: 'behiahmadi6@gmail.com'
+
+          DEVICE_TREE: 'https://github.com/Behrooz140/twrp_device_samsung_a14'
+          DEVICE_TREE_BRANCH: 'main'
+
+          DEVICE_PATH: 'device/samsung/a14m'
+          DEVICE_NAME: 'a14'
+
+          BUILD_TARGET: 'recovery'
+          GH_RELEASE: 'true'
