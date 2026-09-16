@@ -30,7 +30,7 @@ jobs:
           DEVICE_TREE_BRANCH: 'main'
 
           DEVICE_PATH: 'device/samsung/a14m'
-          DEVICE_NAME: 'a14'
+          DEVICE_NAME: 'a14m'
 
           BUILD_TARGET: 'recovery'
           GH_RELEASE: 'true'
